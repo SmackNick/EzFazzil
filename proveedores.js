@@ -3,6 +3,7 @@ const googleSheetsApiKey = 'AIzaSyAfyzoVXMsS5yg11Oh73M8tpgxPNReW4OQ';
 const sheetId = '1mcXWi8TzwfDzVCN_ZCNiQlOOcCtSB2JKQfnSoE9HK9k';
 const sheetName = 'Sheet1'; // Name of the sheet
 const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}?key=${googleSheetsApiKey}`;
+// const apiUrl = 'https://proveedoresdup-worker.npalston.workers.dev'
 
 // Pagination Variables
 let currentPage = 1;
@@ -40,6 +41,9 @@ function displaySuppliers(data, page) {
 
     paginatedData.forEach((row) => {
         if (row.length >= 9) {
+            // Create clickable Instagram hashtag link
+            const hashtagLink = row[8] ? `<a href="https://www.instagram.com/explore/tags/${row[8].replace('#', '')}" target="_blank">${row[8]}</a>` : ''; 
+
             const tr = document.createElement('tr');
             tr.innerHTML = `
                 <td>${row[0]}</td>   <!-- Number -->
@@ -50,7 +54,7 @@ function displaySuppliers(data, page) {
                 <td>${row[5]}</td>   <!-- Service Category -->
                 <td>${row[6]}</td>   <!-- Sub-Category -->
                 <td>${row[7]}</td>   <!-- Contact Info -->
-                <td>${row[8]}</td>   <!-- Instagram Hashtag -->
+                <td>${hashtagLink}</td>   <!-- Instagram Hashtag as link -->
                 <td>${row[9]}</td>   <!-- Rating -->
             `;
             tableBody.appendChild(tr);

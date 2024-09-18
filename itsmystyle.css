@@ -42,19 +42,19 @@ header.scrolled {
     background-color: rgba(74, 144, 226, 1);
 }
 
-/* Header styles */
+/* Header styles
 .logo a {
-    text-decoration: none; /* Remove the underline */
-    color: white;          /* Set the color to white, or your preferred color */
+    text-decoration: none; /* Remove the underline 
+    color: white;          /* Set the color to white, or your preferred color 
     font-size: 1.5rem;
     font-weight: bold;
 }
+*/
 
-/* Ensure the logo link behaves like the other header text on hover */
+/* Ensure the logo link behaves like the other header text on hover
 .logo a:hover {
-    color: var(--light-color); /* Optional: Add hover effect if needed */
-}
-
+    color: var(--light-color); /* Optional: Add hover effect if needed
+} */
 
 nav {
     display: flex;
@@ -62,9 +62,35 @@ nav {
     align-items: center;
 }
 
+/*
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
+}
+*/
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 40px; /* Adjust the width of the logo */
+    height: auto;
+    margin-right: 10px; /* Space between the logo and the text */
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff; /* Or adjust to match your preferred color */
+    text-transform: uppercase;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
 }
 
 .nav-links {
@@ -741,7 +767,7 @@ p {
 }
 
 #proveedores-table tr:hover {
-    background-color: var(--light-color);
+ /*   background-color: var(--light-color);*/
 }
 
 #proveedores-table a {
@@ -930,4 +956,22 @@ footer {
     max-width: 300px;
     width: 100%;
     margin-bottom: 1rem;
+}
+
+.hidden {
+    display: none; /* Hide the extra row initially */
+}
+
+/* Optional: Add some padding or style to the details */
+#proveedores-table td {
+    padding: 10px;
+}
+
+/* Make the button look like an expandable icon */
+.toggle-details {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1rem;
 }

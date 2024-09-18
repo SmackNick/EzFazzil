@@ -90,3 +90,9 @@ if (hamburger && navLinks) {
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
 };
+
+// Reset the form on page load to clear previous input data
+window.addEventListener('load', () => {
+    const form = document.querySelector('.contact-form');
+    form.reset(); // Clears all form fields
+});

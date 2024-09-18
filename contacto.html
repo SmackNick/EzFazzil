@@ -65,7 +65,7 @@
                 <p>Si tienes alguna consulta o quieres registrarte como proveedor de servicios, completa el siguiente formulario y nos pondremos en contacto contigo a la brevedad posible.</p>
 
                 <!-- Contact Form -->
-                <form action="https://formspree.io/f/xqazvzlo" method="POST" class="contact-form">
+                <form action="https://formspree.io/f/xqazvzlo" method="POST" class="contact-form" autocomplete="off">
                     <div class="form-group">
                         <label for="name">Nombre</label>
                         <input type="text" id="name" name="name" required>
@@ -82,8 +82,13 @@
                         <label for="message">Mensaje</label>
                         <textarea id="message" name="message" rows="6" required></textarea>
                     </div>
+
+                    <!-- Honeypot Field for Spam Protection (Invisible to users) -->
+                    <input type="text" name="honeypot" id="honeypot" style="display:none;">
+
                     <button type="submit" class="btn">Enviar</button>
                 </form>
+
             </div>
         </section>
     </main>

@@ -1,9 +1,5 @@
-// Google Sheets API settings
-const googleSheetsApiKey = 'AIzaSyAfyzoVXMsS5yg11Oh73M8tpgxPNReW4OQ';
-const sheetId = '1mcXWi8TzwfDzVCN_ZCNiQlOOcCtSB2JKQfnSoE9HK9k';
-const sheetName = 'Sheet1'; // Name of the sheet
-const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}?key=${googleSheetsApiKey}`;
-// const apiUrl = 'https://proveedoresdup-worker.npalston.workers.dev'
+
+const apiUrl = 'https://proveedoresdup-worker.npalston.workers.dev'
 
 // Pagination Variables
 let currentPage = 1;

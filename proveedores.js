@@ -1,4 +1,3 @@
-
 const apiUrl = 'https://proveedoresdup-worker.npalston.workers.dev'
 
 // Pagination Variables
@@ -175,6 +174,18 @@ function updatePagination() {
 
     // Disable/Enable the Next button
     document.getElementById('next-page').disabled = currentPage === totalPages;
+}
+
+// Toggle for hamburger menu
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+console.log(hamburger, navLinks);  // Check if these elements exist in the page
+
+
+if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('nav-active');
+    });
 }
 
 // Add event listener for search input

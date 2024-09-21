@@ -1,4 +1,4 @@
-const apiUrl = 'https://proveedoresdup-worker.npalston.workers.dev'
+const apiUrl = 'https://prov0044.ezfazzil.workers.dev/'
 
 // Pagination Variables
 let currentPage = 1;

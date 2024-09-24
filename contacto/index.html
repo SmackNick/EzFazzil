@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lista de proveedores de servicios en Fazzil. Encuentra profesionales para todo tipo de servicios.">
-    <meta name="keywords" content="Fazzil, proveedores, servicios, búsqueda">
-    <title>Proveedores de Servicios - Fazzil</title>
+    <meta name="description" content="Contáctanos a través de nuestro formulario. En Fazzil estamos aquí para ayudarte.">
+    <meta name="keywords" content="contacto, servicios, Fazzil, formulario">
+    <title>Contacto - Fazzil</title>
     <link rel="stylesheet" href="itsmystyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
      <!-- Favicon links -->
      <link rel="apple-touch-icon" sizes="180x180" href="Images/favic/apple-touch-icon.png">
@@ -64,65 +65,39 @@
     </header>
 
     <main>
-        <!-- Title Section -->
-        <section class="title-section">
-            <h2>Proveedores de Servicios</h2>
-            <p>Encuentra los mejores proveedores de servicios en tu región. Filtra por ciudad, región o categoría de servicio.</p>
-            <p class="mobile-only" style="font-size: 85%;">*Para una mejor experiencia y más información, <br>te recomendamos buscar proveedores en PC o tablet.</p>
-            <button class="show-all">Mostrar Todos</button> <!-- Show All Button  -->
-        </section>
+        <!-- Contact Section -->
+        <section id="contacto" class="contact-section">
+            <div class="container">
+                <h2>Contáctanos</h2>
+                <p>Si tienes alguna consulta o quieres registrarte como proveedor de servicios, completa el siguiente formulario y nos pondremos en contacto contigo a la brevedad posible.</p>
 
-        <!-- Filter Section -->
-        <section class="filter-section">
-            <select id="filter-city">
-                <option value="">Filtrar por Ciudad</option>
-                <!-- Options added dynamically -->
-            </select>
-            <select id="filter-region">
-                <option value="">Filtrar por Región</option>
-                <!-- Options added dynamically -->
-            </select>
-            <select id="filter-category">
-                <option value="">Filtrar por Categoría</option>
-                <!-- Options added dynamically -->
-            </select>
-            <button class="clear-filters">Limpiar Filtros</button>
-        </section>
+                <!-- Contact Form -->
+                <form action="https://formspree.io/f/xqazvzlo" method="POST" class="contact-form" autocomplete="on">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="_replyto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="services">Tipo de Servicio</label>
+                        <input type="text" id="services" name="services" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
 
-        <!-- Add Show All Button here -->
-        <section class="filter-section search-section">
-             <input type="text" id="search-bar" placeholder="Buscar">
-        </section>
-        
+                    <!-- Honeypot Field for Spam Protection (Invisible to users) -->
+                    <input type="text" name="honeypot" id="honeypot" style="display:none;">
 
-        <!-- Table Section -->
-        <section class="table-section">
-            <table id="proveedores-table">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Nombre Proveedor</th>
-                        <th>Nombre Contacto</th>
-                        <th>Ciudad</th>
-                        <th>Región</th>
-                        <th>Categoría</th>
-                        <th>Subcategoría</th>
-                        <th>Contacto</th>
-                        <th>IG Link</th>
-                        <th>Rating</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Data populated dynamically from JavaScript -->
-                </tbody>
-            </table>
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
+
+            </div>
         </section>
-        <!-- Pagination Controls -->
-<section class="pagination-section">
-    <button id="prev-page" disabled>Anterior</button>
-    <span id="page-info">Página 1</span>
-    <button id="next-page">Siguiente</button>
-</section>
     </main>
 
     <footer>
@@ -150,7 +125,8 @@
             <p>&copy; 2024 Fazzil. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <!-- Include the JavaScript file for functionality -->
-    <script src="proveedores.js"></script>
+
+    <script src="cooljava.js"></script>
+
 </body>
 </html>

@@ -818,7 +818,7 @@ footer .social-icons a {
         line-height: 1.4;
     }
 
-    #proveedores-table :is(th, td):nth-child(1),
+   /* #proveedores-table :is(th, td):nth-child(2),*/
     #proveedores-table :is(th, td):nth-child(4),
     #proveedores-table :is(th, td):nth-child(5),
     #proveedores-table :is(th, td):nth-child(6) {

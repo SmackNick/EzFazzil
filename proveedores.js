@@ -205,7 +205,7 @@ function filterSuppliers() {
         const city = row[3].toLowerCase();
         const region = row[4].toLowerCase();
 
-        const matchesSearch = supplierName.includes(searchQuery) || contactName.includes(searchQuery) || category.includes(searchQuery) || subcategory.includes(searchQuery);
+        const matchesSearch = supplierName.includes(searchQuery) || contactName.includes(searchQuery) || category.includes(searchQuery) || subcategory.includes(searchQuery) || city.includes(searchQuery) || region.includes(searchQuery);
         const matchesCity = city.includes(cityFilter) || cityFilter === '';
         const matchesRegion = region.includes(regionFilter) || regionFilter === '';
         const matchesCategory = category.includes(categoryFilter) || categoryFilter === '';
